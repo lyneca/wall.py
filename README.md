@@ -41,7 +41,7 @@ And (for example) my monitor setup, something like this:
 |      |
 +------+
 
-1024x1280+0+0, 1920x1080+1024+0
+Monitor sizes: 1024x1280+0+0, 1920x1080+1024+0
 ```
 
 The script will output these two images, with the correct aspect ratio of my two monitors:
