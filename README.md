@@ -27,7 +27,7 @@ $ python3 wall.py [IMAGE]
 
 ## Example
 
-Given this image (taken from [this reddit post](https://www.reddit.com/r/WidescreenWallpaper/comments/bvqt41/dreams_3440x1440/)):
+Given this image (taken from [this reddit post](https://www.reddit.com/r/WidescreenWallpaper/comments/bvqt41/dreams_3440x1440/), credit to u/vector_control):
 
 ![](https://external-preview.redd.it/maCo_IQpxZHQiKhC3btIbR1uw6Y06aGOpibwtQYkA1E.png?width=1024&auto=webp&s=96105512137914fa271b532879075078d6c7980d)
 
