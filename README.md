@@ -41,14 +41,18 @@ And (for example) my monitor setup, something like this:
 |      |
 +------+
 
-`1024x1280+0+0` and `1920x1080+1024+0`
+1024x1280+0+0, 1920x1080+1024+0
 ```
 
-The script will output these two images:
+The script will output these two images, with the correct aspect ratio of my two monitors:
 
-![](eg_1.png)
-![](eg_2.png)
+<img src="eg_1.png" height=300px>
+<img src="eg_2.png" height=300px>
 
 And this image showing where the crops were made:
 
 ![](eg_regions.png)
+
+## Limitations
+
+This script should work with any number of monitors, although untested. Currently, it will always try to crop from the top right of the source image.
