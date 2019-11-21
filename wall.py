@@ -43,7 +43,7 @@ size = image.size
 full_width = max([display.x_off + display.width for display in displays])
 full_height = max([display.y_off + display.height for display in displays])
 
-if full_width >= full_height:
+if full_width / size[0] >= full_height / size[1]:
     scale_factor = size[0] / full_width
 else:
     scale_factor = size[1] / full_height
