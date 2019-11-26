@@ -1,10 +1,11 @@
+import colorsys
+import math
+import os
 import re
 import sys
 import subprocess
-import colorsys
 from dataclasses import dataclass
 from random import random
-import math
 
 from PIL import Image, ImageDraw
 
@@ -38,6 +39,7 @@ displays = [
 ]
 
 image = Image.open(sys.argv[1]).convert('RGBA')
+input_filename = os.path.splitext(sys.argv[1])[0]
 size = image.size
 
 full_width = max([display.x_off + display.width for display in displays])
@@ -68,11 +70,14 @@ for i, display in enumerate(scaled):
 
 image = Image.alpha_composite(image, tmp)
 
+if not os.path.exists(input_filename):
+    os.mkdir(input_filename)
+
 for i, section in enumerate(sections):
     size = (
         math.ceil(section.size[0] / scale_factor),
         math.ceil(section.size[1] / scale_factor)
     )
-    section.save(f'out_{i}_{size[0]}x{size[1]}.png')
+    section.save(f'{input_filename}/{i}_{size[0]}x{size[1]}.png')
 
-image.save('regions.png')
+image.save(input_filename + '/regions.png')
